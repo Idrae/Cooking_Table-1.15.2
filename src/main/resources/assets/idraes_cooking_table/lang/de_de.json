@@ -1,0 +1,6 @@
+{
+  "block.idraes_cooking_table.cooking_table": "Kochtisch",
+  "item.idraes_cooking_table.delicious_cookie": "Leckerer Keks",
+  "container.cooking_table": "Kochen",
+  "gui.toggle_button.cooking_table": "Herstellbares wird angezeigt"
+}

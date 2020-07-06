@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "particle": "idraes_cooking_table:blocks/cooking_table_front",
+    "down": "idraes_cooking_table:blocks/cooking_table_bottom",
+    "up": "idraes_cooking_table:blocks/cooking_table_top",
+    "north": "idraes_cooking_table:blocks/cooking_table_front",
+    "east": "idraes_cooking_table:blocks/cooking_table_side",
+    "south": "idraes_cooking_table:blocks/cooking_table_side",
+    "west": "idraes_cooking_table:blocks/cooking_table_front"
+  }
+}

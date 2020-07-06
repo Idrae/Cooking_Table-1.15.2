@@ -1,0 +1,22 @@
+{
+  "type": "idraes_cooking_table:cooking",
+  "pattern": [
+    " Y ",
+    "YXY",
+    " Y "
+  ],
+
+  "key": {
+    "X": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "Y": {
+      "item": "minecraft:wheat"
+    }
+  },
+
+  "result": {
+    "item": "idraes_cooking_table:delicious_cookie",
+    "count": 16
+  }
+}

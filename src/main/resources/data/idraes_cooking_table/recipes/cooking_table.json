@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern": [
+    " X ",
+    "YZY"
+  ],
+
+  "key": {
+    "X": {
+      "tag": "minecraft:logs"
+    },
+    "Y": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Z": {
+      "item": "minecraft:crafting_table"
+    }
+  },
+
+  "result": {
+    "item": "idraes_cooking_table:cooking_table"
+  }
+}

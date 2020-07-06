@@ -1,0 +1,6 @@
+{
+  "block.idraes_cooking_table.cooking_table": "Cooking Table",
+  "item.idraes_cooking_table.delicious_cookie": "Delicious Cookie",
+  "container.cooking_table": "Cooking",
+  "gui.toggle_button.cooking_table": "Showing Cookable"
+}
