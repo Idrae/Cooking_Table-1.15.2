@@ -7,10 +7,12 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.CraftingInventory;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.IRecipeHolder;
+import net.minecraft.inventory.container.FurnaceResultSlot;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.IRecipeType;
+import net.minecraft.tileentity.AbstractFurnaceTileEntity;
 import net.minecraft.util.NonNullList;
 
 public class CookingTableCraftingResultSlot extends Slot {
@@ -63,7 +65,7 @@ public class CookingTableCraftingResultSlot extends Slot {
         if (this.amountCrafted > 0) {
             stack.onCrafting(this.player.world, this.player, this.amountCrafted);
             net.minecraftforge.fml.hooks.BasicEventHooks.firePlayerCraftingEvent(this.player, stack, this.craftMatrix);
-            player.world.addEntity(new ExperienceOrbEntity(player.world, player.getPosX(), player.getPosY() + 0.5D, player.getPosZ() + 0.5D, getFoodExp(stack)));
+            player.world.addEntity(new ExperienceOrbEntity(player.world, player.getPosX(), player.getPosY() + 0.5D, player.getPosZ() + 0.5D, getFoodExp(new ItemStack(stack.getItem(), this.amountCrafted))));
         }
         if (this.inventory instanceof IRecipeHolder) {
             ((IRecipeHolder)this.inventory).onCrafting(this.player);
@@ -76,9 +78,10 @@ public class CookingTableCraftingResultSlot extends Slot {
         if (stack.getItem() == Items.CAKE) {
             exactExpValue = (float) stack.getCount() * 7;
         } else {
-            exactExpValue = (float) stack.getCount() * stack.getItem().getFood().getHealing() / 2;
+            exactExpValue = (float) stack.getCount() * stack.getItem().getFood().getHealing();
+            exactExpValue /= 2;
         }
-        int expValue = (int) Math.floor(exactExpValue);
+        int expValue = (int) exactExpValue;
         int optionalExpValue = Math.random() < exactExpValue - expValue ? 1 : 0;
 
         return expValue + optionalExpValue;

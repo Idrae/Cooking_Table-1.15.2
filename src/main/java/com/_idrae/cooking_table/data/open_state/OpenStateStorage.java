@@ -22,6 +22,7 @@ public class OpenStateStorage implements Capability.IStorage<OpenState> {
         nbt.putBoolean(NBT_KEY, instance.isOpenState());
         return nbt;
     }
+    
 
     @Override
     public void readNBT(Capability<OpenState> capability, OpenState instance, Direction side, INBT nbt) {

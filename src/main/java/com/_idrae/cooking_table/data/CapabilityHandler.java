@@ -13,7 +13,7 @@ public class CapabilityHandler {
 
     public static final ResourceLocation IS_COOKABLE = new ResourceLocation(CookingTableMod.MOD_ID,  "is_cookable");
 
-   // @SubscribeEvent
+    // @SubscribeEvent
     public static void attachCapabilityEntity(final AttachCapabilitiesEvent<Entity> event)
     {
         if (!(event.getObject() instanceof PlayerEntity))

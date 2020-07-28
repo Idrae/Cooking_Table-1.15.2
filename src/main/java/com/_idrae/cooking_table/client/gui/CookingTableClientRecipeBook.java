@@ -14,6 +14,7 @@ import net.minecraft.item.crafting.RecipeBook;
 import net.minecraft.item.crafting.RecipeManager;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.event.entity.player.AdvancementEvent;
 
 import javax.annotation.Nullable;
 import java.util.Collections;
@@ -57,6 +58,7 @@ public class CookingTableClientRecipeBook extends RecipeBook {
                 }
 
                 recipeList.add(irecipe);
+
             }
         }
     }

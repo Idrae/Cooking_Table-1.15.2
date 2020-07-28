@@ -7,6 +7,7 @@ public class OpenState {
 
     public OpenState(){
     }
+
     public static boolean isOpenState() {
         return openState;
     }
